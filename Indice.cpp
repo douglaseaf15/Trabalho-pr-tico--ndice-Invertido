@@ -43,7 +43,7 @@ void Indice::LerArquivo(){
 
                             //Apaga os caracteres indesejados nas palavras
                             palavra.erase(remove_if(palavra.begin(), palavra.end(), IsChars(",.;-:'?][")), palavra.end());
-                            lista_arquivo[i].push_front(palavra);
+                            ListaComNomeDosArquivos[i].push_front(palavra);
 
 
 
@@ -81,25 +81,26 @@ void Indice::EntraComPalavra(){
 void Indice::ArmazenaNomeArquivoQContem(){
 
               for(int i = 0; i<5;i++){
-                for (std::list<std::string>::iterator it=lista_arquivo[i].begin(); it != lista_arquivo[i].end(); ++it)
+                for (std::list<std::string>::iterator it=ListaComNomeDosArquivos[i].begin(); it != ListaComNomeDosArquivos[i].end(); ++it)
 
                     if ((PalavraBuscar).compare(*it) == 0){
-                         arq_q_contem.push_front(arquivos[i]);
+                         ListaDeArquivosQueContem.push_front(arquivos[i]);
                          break;//Se a palavra for encontrada pela  comparação da linha de cima, o break vai pro for externo e  muda de lista
                     }   
                }
 }
 
 void Indice::ImprimeArquivosQContem(){
-        if(arq_q_contem.size() != 0){
+        if(ListaDeArquivosQueContem.size() != 0)
+            ListaDeArquivosQueContem.sort();//Coloca os nomes dos arquivos em ordem alfabética
             std::cout <<"A palavra " << PalavraBuscar <<std::endl <<" esta contida em:" <<std::endl;
-            for (std::list<std::string>::iterator it=arq_q_contem.begin(); it != arq_q_contem.end(); ++it){
+            for (std::list<std::string>::iterator it=ListaDeArquivosQueContem.begin(); it != ListaDeArquivosQueContem.end(); ++it){
                 std::cout << (*it) <<std::endl;
             }
-        }
-         else{
+            return;
+         
              std::cout << " A palavra "<< PalavraBuscar <<std::endl<<" nao esta presente em nenhum arquivo"<<std::endl;
-         }
+         
 }
 
 
