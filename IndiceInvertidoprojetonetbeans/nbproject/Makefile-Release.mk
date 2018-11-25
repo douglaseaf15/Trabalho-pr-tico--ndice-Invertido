@@ -72,11 +72,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/indiceinvertido.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/indiceinvertidoprojetonetbeans.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/indiceinvertido.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/indiceinvertidoprojetonetbeans.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/indiceinvertido ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/indiceinvertidoprojetonetbeans ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Indice.o: Indice.cpp
 	${MKDIR} -p ${OBJECTDIR}
