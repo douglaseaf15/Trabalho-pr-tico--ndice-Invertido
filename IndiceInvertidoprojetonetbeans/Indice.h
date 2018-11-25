@@ -16,7 +16,7 @@ class Indice
 
     private:
 
-                list <string> lista_arquivo[5], arq_q_contem;
+                list <string> ListaComNomeDosArquivos[5], ListaDeArquivosQueContem;
                 string palavra;
                 string PalavraBuscar;
                 string arquivos[5];
