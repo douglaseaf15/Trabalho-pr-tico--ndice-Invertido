@@ -91,16 +91,16 @@ void Indice::ArmazenaNomeArquivoQContem(){
 }
 
 void Indice::ImprimeArquivosQContem(){
-        if(ListaDeArquivosQueContem.size() != 0)
+        if(ListaDeArquivosQueContem.size() != 0){
             ListaDeArquivosQueContem.sort();//Coloca os nomes dos arquivos em ordem alfabética
-            std::cout <<"A palavra " << PalavraBuscar <<std::endl <<" esta contida em:" <<std::endl;
+            std::cout <<"A palavra " <<PalavraBuscar <<std::endl <<"esta contida em:" <<std::endl;
             for (std::list<std::string>::iterator it=ListaDeArquivosQueContem.begin(); it != ListaDeArquivosQueContem.end(); ++it){
                 std::cout << (*it) <<std::endl;
             }
-            return;
-         
-             std::cout << " A palavra "<< PalavraBuscar <<std::endl<<" nao esta presente em nenhum arquivo"<<std::endl;
-         
+        }
+        else{
+                std::cout << " A palavra "<<PalavraBuscar <<std::endl<<" nao esta presente em nenhum arquivo"<<std::endl;
+            }
 }
 
 
